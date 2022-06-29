@@ -31,6 +31,7 @@ npindex=np+1
 #         finalcoordinates.append(l)
 #     else:
 #         print("no vortices present")
-
 coordinates = vortex_coodinates(np)
-
+y = coordinates[0]
+z = coordinates[1]
+velocities = velocities(np, y, z, circulation)
