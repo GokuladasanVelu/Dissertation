@@ -3,26 +3,33 @@ import math
 
 def velocities(np, y, z, circulation):
     pi = math.pi
-    npindex = np+1
+    npindex = np
 
-    u_list = []
-    u_value = 0
-    u_list.extend([u_value for i in range(1, npindex)])
+#    u_list = []
+#     u_value = 0
+#     u_list.extend([u_value for i in range(1, npindex)])
+    u_final = []
 
-    v_list = []
-    v_value = 0
-    v_list.extend([v_value for i in range(1, npindex)])
+#    v_list = []
+#     v_value = 0
+#     v_list.extend([v_value for i in range(1, npindex)])
+    v_final = []
 
-    w_list = []
-    w_value = 0
-    w_list.extend([w_value for i in range(1, npindex)])
+#    w_list = []
+#     w_value = 0
+#     w_list.extend([w_value for i in range(1, npindex)])
+    w_final = []
 
     for i in range(1, npindex):
 
         for j in range(1, npindex):
-            r2 = (y[i] - y[j]) ** 2 + (z[i] - z[j]) ** 2
-            u_list[j] = u_list[j] + circulation * ((z[j] - z[i])/r2/2/pi)
-            v_list[j] = v_list[j] - circulation * ((y[j] - y[i])/r2/2/pi)
-            w_list = u_list[j] + v_list[j]
+            if i is not j:
+                r2 = (y[i] - y[j]) ** 2 + (z[i] - z[j]) ** 2
+                u = circulation * ((z[j] - z[i]) / r2 / 2 / pi)
+                u_final.append(u)
+                v = -circulation * ((y[j] - y[i]) / r2 / 2 / pi)
+                v_final.append(v)
+                w = u + v
+                w_final.append(w)
 
-    return v_list, u_list, w_list
+    return v_final, u_final, w_final
