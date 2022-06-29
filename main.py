@@ -10,7 +10,7 @@ y = int(spanwise)
 
 span = input("Span: ")
 b = int(span)
-a=1
+
 maxcirculation = input("Maximum circulation: ")
 gammao = int(maxcirculation)
 circulation = lagrangian_circulation(y, b, gammao)
