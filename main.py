@@ -4,7 +4,7 @@ from VortexCoordinates import vortex_coodinates
 # %% initial list of points
 # %% number of points
 
-#--------------------x,b,np,gammao-------------------
+# --------------------x,b,np,gammao-------------------
 # x = input("Number of point vortices: ")
 # np = int(x)
 # spanwise = input("Distance in span wise direction: ")
@@ -41,7 +41,7 @@ gammao = 90
 #         finalcoordinates.append(l)
 #     else:
 #         print("no vortices present")
-#-------------------------------------------------------------------------
+# -------------------------------------------------------------------------
 
 coordinates = vortex_coodinates(np)
 y = coordinates[0]

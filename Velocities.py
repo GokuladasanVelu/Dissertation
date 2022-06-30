@@ -1,6 +1,6 @@
 import math
 
-#-------------------------Velocity-----------------------------------
+# -------------------------Velocity-----------------------------------
 
 
 def velocities(np, y, z, circulation):
@@ -21,7 +21,6 @@ def velocities(np, y, z, circulation):
 #     w_value = 0
 #     w_list.extend([w_value for i in range(1, npindex)])
     w_final = []
-
 
 
 # --------------------Disregard---------------------
