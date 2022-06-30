@@ -3,18 +3,28 @@ from Velocities import velocities
 from VortexCoordinates import vortex_coodinates
 # %% initial list of points
 # %% number of points
-x = input("Number of point vortices: ")
-np = int(x)
-spanwise = input("Distance in span wise direction: ")
-y = int(spanwise)
 
-span = input("Span: ")
-b = int(span)
+#---------------------x,b,np,gammao-------------------
+# x = input("Number of point vortices: ")
+# np = int(x)
+# spanwise = input("Distance in span wise direction: ")
+# spwise = int(spanwise)
+#
+# span = input("Span: ")
+# b = int(span)
+#
+# maxcirculation = input("Maximum circulation: ")
+# gammao = int(maxcirculation)
+# npindex=np+1
+# -----------------------------------------------------------------------
 
-maxcirculation = input("Maximum circulation: ")
-gammao = int(maxcirculation)
-circulation = lagrangian_circulation(y, b, gammao)
-npindex=np+1
+np = 9
+npindex = np+1
+spwise = 10
+b = 100
+gammao = 90
+
+# -------------------------Coordinates Manual entry---------------------
 # npaslist=[]
 # finalcoordinates=[]
 #
@@ -31,7 +41,10 @@ npindex=np+1
 #         finalcoordinates.append(l)
 #     else:
 #         print("no vortices present")
+#-------------------------------------------------------------------------
+
 coordinates = vortex_coodinates(np)
 y = coordinates[0]
 z = coordinates[1]
+circulation = lagrangian_circulation(y, b, gammao, np)
 velocities = velocities(np, y, z, circulation)
