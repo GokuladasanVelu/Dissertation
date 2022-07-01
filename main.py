@@ -16,7 +16,7 @@ from VortexCoordinates import vortex_coodinates
 # npindex=np+1
 # -----------------------------------------------------------------------
 
-np = 9
+np = 2
 npindex = np+1
 spwise = 10
 b = 100
