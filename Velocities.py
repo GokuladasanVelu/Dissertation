@@ -31,6 +31,6 @@ def velocities(np, y, z, circulation):
                 dict_u[k1] = u
                 dict_v[k1] = v
 
-    return v_final, u_final, w_final
+    return u_final, v_final, w_final, dict_u, dict_v, dict_w
 
 
