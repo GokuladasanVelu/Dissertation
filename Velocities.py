@@ -9,7 +9,7 @@ def velocities(np, y, z, circulation):
     u_final = []
     v_final = []
     w_final = []
-#
+
     for i in range(0, npindex):
 
         for j in range(0, npindex):
