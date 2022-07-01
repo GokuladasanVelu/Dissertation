@@ -9,6 +9,9 @@ def velocities(np, y, z, circulation):
     u_final = []
     v_final = []
     w_final = []
+    dict_w = {}
+    dict_u = {}
+    dict_v = {}
 
     for i in range(0, npindex):
 
@@ -21,6 +24,12 @@ def velocities(np, y, z, circulation):
                 v_final.append(v)
                 w = u + v
                 w_final.append(w)
+                # Dictionary for key pair of vortex numbers and their respective w_final
+                k = [i, j]
+                k1 = str(k)
+                dict_w[k1] = w
+                dict_u[k1] = u
+                dict_v[k1] = v
 
     return v_final, u_final, w_final
 
