@@ -18,9 +18,9 @@ def velocities(np, y, z, circulation):
         for j in range(0, npindex):
             if i is not j:
                 r2 = (y[i] - y[j]) ** 2 + (z[i] - z[j]) ** 2
-                u = (circulation[j] * (z[j] - z[i])) / (r2 / 2 / pi)
+                u = (circulation[j] * (z[j] - z[i])) / (r2 * 2 * pi)
                 u_final.append(u)
-                v = (-(circulation[j]) * (y[j] - y[i])) / (r2 / 2 / pi)
+                v = (-(circulation[j]) * (y[j] - y[i])) / (r2 * 2 * pi)
                 v_final.append(v)
                 w = u + v
                 w_final.append(w)
