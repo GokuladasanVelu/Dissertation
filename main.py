@@ -17,11 +17,11 @@ from matplotlib import pyplot
 # npindex=np+1
 # -------------------------------------------------------
 
-np = 3
+np = 32
 npindex = np+1
 spwise = 10
-b = 100
-gammao = 90
+b = 2
+gammao = 1
 
 # -------------------------Coordinates Manual entry---------------------
 # npaslist=[]
@@ -42,16 +42,15 @@ gammao = 90
 #         print("no vortices present")
 # -------------------------------------------------------------------------
 
-coordinates = vortex_coodinates(np)
+coordinates = vortex_coodinates(np, b, gammao, np)
 y = coordinates[0]
 z = coordinates[1]
-circulation = lagrangian_circulation(y, b, gammao, np)
+
 vel = velocities(np, y, z, circulation)
-# u = []
-# n = 90
-# for i in range(n):
-#     u.append(i)
-#
-# v = circulation
-# pyplot.scatter(u, v)
-# pyplot.show()
+u = []
+for i in range(np):
+    u.append(i)
+
+v = circulation
+pyplot.scatter(u, v)
+pyplot.show()

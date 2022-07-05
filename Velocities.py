@@ -2,13 +2,14 @@ import math
 
 # -------------------------Velocity-----------------------------------
 
+
 def velocities(np, y, z, circulation):
     pi = math.pi
     npindex = np
     u_final = []
     v_final = []
-    w_final = []
-    dict_w = {}
+    # w_final = []
+    # dict_w = {}
     dict_u = {}
     dict_v = {}
 
@@ -21,13 +22,13 @@ def velocities(np, y, z, circulation):
                 u_final.append(u)
                 v = (-(circulation[j]) * (y[j] - y[i])) / (r2 * 2 * pi)
                 v_final.append(v)
-                w = u + v
-                w_final.append(w)
+                # w = u + v
+                # w_final.append(w)
                 # Dictionary for key pair of vortex numbers and their respective w_final
                 k = [i, j]
                 k1 = str(k)
-                dict_w[k1] = w
+                # dict_w[k1] = w
                 dict_u[k1] = u
                 dict_v[k1] = v
 
-    return u_final, v_final, w_final, dict_u, dict_v, dict_w
+    return u_final, v_final, dict_u, dict_v
