@@ -2,7 +2,6 @@ import math
 
 # -------------------------Velocity-----------------------------------
 
-
 def velocities(np, y, z, circulation):
     pi = math.pi
     npindex = np
