@@ -44,7 +44,8 @@ gammao = 1
 
 coordinates = vortex_coodinates(np, b, gammao, np)
 y = coordinates[0]
-z = coordinates[1]
+circulation = coordinates[1]
+z = coordinates[2]
 
 vel = velocities(np, y, z, circulation)
 u = []

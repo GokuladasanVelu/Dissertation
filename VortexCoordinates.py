@@ -20,6 +20,7 @@ def vortex_coodinates(npts, b, gammao, np):
     flipped_circulation = list(flipped_circulation)
     withnegativey = flippedy + y
     withnegative_circulation = flipped_circulation + circulation
-    z = npy.zeros(npts)
+    lengthy = len(withnegativey)
+    z = npy.zeros(lengthy)
 
     return withnegativey, withnegative_circulation, z
