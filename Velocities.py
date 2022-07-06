@@ -1,34 +1,23 @@
 import math
-
 # -------------------------Velocity-----------------------------------
 
 
-def velocities(np, y, z, circulation):
+def velocities(np, y, z, circulation, d):
     pi = math.pi
-    npindex = np
-    u_final = []
-    v_final = []
+    npindex = len(y)
+    u = [0] * npindex
+    v = [0] * npindex
     # w_final = []
     # dict_w = {}
-    dict_u = {}
-    dict_v = {}
 
     for i in range(0, npindex):
 
         for j in range(0, npindex):
             if i is not j:
-                r2 = (y[i] - y[j]) ** 2 + (z[i] - z[j]) ** 2
-                u = (circulation[j] * (z[j] - z[i])) / (r2 * 2 * pi)
-                u_final.append(u)
-                v = (-(circulation[j]) * (y[j] - y[i])) / (r2 * 2 * pi)
-                v_final.append(v)
-                # w = u + v
+                r2 = ((y[i] - y[j]) ** 2) + ((z[i] - z[j]) ** 2) + (d ** 2)
+                u = u[j] + (circulation[i] * (z[j] - z[i])) / (r2 * 2 * pi)
+                v = v[j] - ((circulation[i]) * (y[j] - y[i])) / (r2 / 2 / pi)
+                w = u + v
                 # w_final.append(w)
-                # Dictionary for key pair of vortex numbers and their respective w_final
-                k = [i, j]
-                k1 = str(k)
-                # dict_w[k1] = w
-                dict_u[k1] = u
-                dict_v[k1] = v
 
-    return u_final, v_final, dict_u, dict_v
+    return u, v

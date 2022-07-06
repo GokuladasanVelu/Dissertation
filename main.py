@@ -1,4 +1,5 @@
 from LagrangianCirculation import lagrangian_circulation
+from Plot import Plot
 from Velocities import velocities
 from VortexCoordinates import vortex_coodinates
 from matplotlib import pyplot
@@ -22,7 +23,9 @@ npindex = np+1
 spwise = 10
 b = 2
 gammao = 1
-
+tmax = 2
+dt = 0.01
+d = 0.1
 # -------------------------Coordinates Manual entry---------------------
 # npaslist=[]
 # finalcoordinates=[]
@@ -47,11 +50,5 @@ y = coordinates[0]
 circulation = coordinates[1]
 z = coordinates[2]
 
-vel = velocities(np, y, z, circulation)
-u = []
-for i in range(np):
-    u.append(i)
-
-v = circulation
-pyplot.scatter(u, v)
-pyplot.show()
+vel = velocities(np, y, z, circulation, d)
+Plot(tmax, dt, np, y, z, circulation)
