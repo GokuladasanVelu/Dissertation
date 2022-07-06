@@ -20,7 +20,7 @@ npindex = np+1
 spwise = 10
 b = 2
 gammao = 1
-tmax = 2
+tmax = 4
 dt = 0.1
 d = 0.1
 # -------------------------Coordinates Manual entry---------------------
