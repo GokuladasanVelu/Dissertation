@@ -13,7 +13,7 @@ from VortexCoordinates import vortex_coodinates
 # maxcirculation = input("Maximum circulation: ")
 # gammao = int(maxcirculation)
 # npindex=np+1
-# -------------------------------------------------------
+# ----a---------------------------------------------------
 
 np = 32
 npindex = np+1
