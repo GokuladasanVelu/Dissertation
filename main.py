@@ -49,6 +49,11 @@ coordinates = vortex_coodinates(np, b, gammao, np)
 y = coordinates[0]
 circulation = coordinates[1]
 z = coordinates[2]
+time = tmax/dt
+time = int(time)
+for i in range (1,time):
+    vel = velocities(np, y, z, circulation, d)
 
-vel = velocities(np, y, z, circulation, d)
+
+
 Plot(tmax, dt, np, y, z, circulation)
