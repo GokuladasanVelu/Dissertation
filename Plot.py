@@ -1,6 +1,7 @@
 from Velocities import velocities
 import matplotlib.pyplot as plt
-#
+# -----------Plotting particles------------
+
 
 def plot(d, tmax, dt, np, y, z, circulation):
     time = (tmax / dt) + 1
@@ -25,5 +26,6 @@ def plot(d, tmax, dt, np, y, z, circulation):
 
     plt.plot(ploty, plotz)
     a = plt.show()
-
+# ------------Plotting Velocity---------------
+    plotvel = v
     return a

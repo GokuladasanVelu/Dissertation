@@ -1,4 +1,5 @@
 from Plot import plot
+from Velocities import velocities
 from VortexCoordinates import vortex_coodinates
 # %% initial list of points
 # %% number of points
@@ -15,7 +16,7 @@ from VortexCoordinates import vortex_coodinates
 # npindex=np+1
 # ----a---------------------------------------------------
 
-np = 32
+np = 100
 npindex = np+1
 spwise = 10
 b = 2
