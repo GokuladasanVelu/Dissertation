@@ -14,17 +14,21 @@ from VortexCoordinates import vortex_coodinates
 # maxcirculation = input("Maximum circulation: ")
 # gammao = int(maxcirculation)
 # npindex=np+1
-# ----a---------------------------------------------------
+# -------------------------------------------------------
+from VortexCoreradius import vortexcoreradius
 
-np = 100
+np = 10
 npindex = np+1
 spwise = 10
 b = 2
 gammao = 1
 tmax = 4
 dt = 0.1
-d = 0.1
-# -------------------------Coordinates Manual entry---------------------
+d = 0.05 #Smoothing factor
+reynoldsnumber = 40
+delT = 1
+rcjo = 12
+# -------------------------Coordinates Manual entry-------
 # npaslist=[]
 # finalcoordinates=[]
 #
@@ -48,3 +52,4 @@ y = coordinates[0]
 circulation = coordinates[1]
 z = coordinates[2]
 plot(d, tmax, dt, np, y, z, circulation)
+vortexcoreradius(np, rcjo, reynoldsnumber, delT)

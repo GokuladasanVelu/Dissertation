@@ -14,9 +14,9 @@ def plot(d, tmax, dt, np, y, z, circulation):
         v = [vel[1]]
         u = u[(len(u) - 1)]
         v = v[(len(v) - 1)]
-        for i in range(0, (len(y))):
-            y[i] = y[i] + (u[i] * dt)
-            z[i] = z[i] + (v[i] * dt)
+        for j in range(0, (len(y))):
+            y[j] = y[j] + (u[j] * dt)
+            z[j] = z[j] + (v[j] * dt)
         yy.append(y)
         zz.append(z)
 
