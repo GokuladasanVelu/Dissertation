@@ -48,12 +48,3 @@ y = coordinates[0]
 circulation = coordinates[1]
 z = coordinates[2]
 plot(d, tmax, dt, np, y, z, circulation)
-
-
-
-
-
-
-
-
-
