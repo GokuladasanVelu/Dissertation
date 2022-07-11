@@ -26,6 +26,5 @@ def plot(d, tmax, dt, np, y, z, circulation):
 
     plt.plot(ploty, plotz)
     a = plt.show()
-# ------------Plotting Velocity---------------
-    plotvel = v
+
     return a
