@@ -1,6 +1,7 @@
 from Plot import plot
 from Velocities import velocities
 from VortexCoordinates import vortex_coodinates
+import matplotlib.pyplot as plt
 # %% initial list of points
 # %% number of points
 
@@ -53,4 +54,8 @@ y = coordinates[0]
 circulation = coordinates[1]
 z = coordinates[2]
 plot(d, tmax, dt, np, y, z, circulation)
-vortexcoreradius_velocity(np, rcjo, reynoldsnumber, delT, circulation, r)
+coreradiusandvelocity = vortexcoreradius_velocity(np, rcjo, reynoldsnumber, delT, circulation, r)
+rcore = coreradiusandvelocity[0]
+vcore = coreradiusandvelocity[1]
+plt.plot(rcore, vcore)
+b = plt.show()

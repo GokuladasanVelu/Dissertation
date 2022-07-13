@@ -3,7 +3,7 @@ def vortexcoreradius_velocity(np, rcjo, reynoldsnumber, delT, circulation, r):
     pi = mt.pi
     coreradius=[]
     corevelocity=[]
-    index = (np*2)-2
+    index = len(circulation)
     for i in range(0, index):
         delT = delT+1
         inversereynoldsnumber = 1 / reynoldsnumber
