@@ -15,19 +15,20 @@ from VortexCoordinates import vortex_coodinates
 # gammao = int(maxcirculation)
 # npindex=np+1
 # -------------------------------------------------------
-from VortexCoreradius import vortexcoreradius
+from VortexCoreradius_velocity import vortexcoreradius_velocity
 
-np = 10
+np = 50
 npindex = np+1
 spwise = 10
 b = 2
-gammao = 1
-tmax = 4
-dt = 0.1
+gammao = 1.4
+tmax = 2
+dt = 0.01
 d = 0.05 #Smoothing factor
 reynoldsnumber = 40
 delT = 1
 rcjo = 12
+r = 1
 # -------------------------Coordinates Manual entry-------
 # npaslist=[]
 # finalcoordinates=[]
@@ -52,4 +53,4 @@ y = coordinates[0]
 circulation = coordinates[1]
 z = coordinates[2]
 plot(d, tmax, dt, np, y, z, circulation)
-vortexcoreradius(np, rcjo, reynoldsnumber, delT)
+vortexcoreradius_velocity(np, rcjo, reynoldsnumber, delT, circulation, r)
