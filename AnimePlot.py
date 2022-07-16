@@ -8,17 +8,21 @@ def anim_plot(d, tmax, dt, np, y, z, circulation):
     time = int(time)
     yy = []
     zz = []
+    umat = []
+    vmat = []
     for i in range(1, time):
         vel = velocities(np, y, z, circulation, d)
         u = [vel[0]]
         v = [vel[1]]
         u = u[(len(u) - 1)]
         v = v[(len(v) - 1)]
+        umat.append(u)
+        vmat.append(v)
         for j in range(0, (len(y))):
             y[j] = y[j] + (u[j] * dt)
             z[j] = z[j] + (v[j] * dt)
-        yy.append(y)
-        zz.append(z)
+    yy.append(y)
+    zz.append(z)
 
     # final plot:
     plotz = zz[(len(zz) - 1)]
@@ -28,3 +32,12 @@ def anim_plot(d, tmax, dt, np, y, z, circulation):
     a = plt.show()
 
     return a
+
+    # animate
+    # for j in range(0, len(umat)):
+    #     ploty = umat[j]
+    #     plotz = vmat[j]
+    #     plt.plot(ploty, plotz)
+    #     plt.pause(0.01)
+    #
+    # plt.show()
