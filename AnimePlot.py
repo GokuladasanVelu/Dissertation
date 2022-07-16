@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 # -----------Plotting particles------------
 
 
-def plot(d, tmax, dt, np, y, z, circulation):
+def anim_plot(d, tmax, dt, np, y, z, circulation):
     time = (tmax / dt) + 1
     time = int(time)
     yy = []
