@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 # -----------Plotting particles------------
 
 
-def anim_plot(reynoldsnumber, d, tmax, dt, np, y, z, circulation):
+def anim_plot(r, reynoldsnumber, d, tmax, dt, np, y, z, circulation):
     time = (tmax / dt) + 1
     time = int(time)
     yy = []
@@ -13,7 +13,7 @@ def anim_plot(reynoldsnumber, d, tmax, dt, np, y, z, circulation):
     yy.append(y)
     zz.append(z)
     for i in range(1, time):
-        vel = velocities(reynoldsnumber, np, yy[(len(yy)-1)], zz[(len(zz)-1)], circulation, d)
+        vel = velocities(r, time, reynoldsnumber, np, yy[(len(yy)-1)], zz[(len(zz)-1)], circulation, d)
         u = [vel[0]]
         v = [vel[1]]
         u = u[(len(u) - 1)]

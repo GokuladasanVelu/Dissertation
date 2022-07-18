@@ -17,7 +17,6 @@ import matplotlib.pyplot as plt
 # gammao = int(maxcirculation)
 # npindex=np+1
 # -------------------------------------------------------
-from VortexCoreradius_velocity import vortexcoreradius_velocity
 
 np = 2
 npindex = np+1
@@ -54,8 +53,8 @@ coordinates = vortex_coodinates(np, b, gammao, np)
 y = coordinates[0]
 circulation = coordinates[1]
 z = coordinates[2]
-anim_plot(reynoldsnumber, d, tmax, dt, np, y, z, circulation)
-coreradiusandvelocity = vortexcoreradius_velocity(rcjo, reynoldsnumber, delT, circulation, r)
+anim_plot(r, reynoldsnumber, d, tmax, dt, np, y, z, circulation)
+
 # rcore = coreradiusandvelocity b = plt.show()[0]
 # # vcore = coreradiusandvelocity[1]
 # # plt.plot(rcore, vcore)
