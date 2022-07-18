@@ -10,6 +10,7 @@ def velocities(np, y, z, circulation, d):
     # w_final = []
     # dict_w = {}
 
+    if
     for i in range(0, npindex):
 
         for j in range(0, npindex):

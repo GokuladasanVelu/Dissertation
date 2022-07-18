@@ -1,5 +1,7 @@
 import math as mt
-def vortexcoreradius_velocity(np, rcjo, reynoldsnumber, delT, circulation, r):
+
+
+def vortexcoreradius_velocity(rcjo, reynoldsnumber, delT, circulation, r):
     pi = mt.pi
     coreradius=[]
     corevelocity=[]
