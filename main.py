@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 # npindex=np+1
 # -------------------------------------------------------
 
-np = 50
+np = 100
 npindex = np+1
 spwise = 10
 b = 2
@@ -29,7 +29,7 @@ d = 0.1 #Smoothing factor
 reynoldsnumber = math.inf
 delT = 1
 rcjo = 12
-r = 1
+r = 0.5
 # -------------------------Coordinates Manual entry-------
 # npaslist=[]
 # finalcoordinates=[]

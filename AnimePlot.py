@@ -13,7 +13,7 @@ def anim_plot(r, reynoldsnumber, d, tmax, dt, np, y, z, circulation):
     yy.append(y)
     zz.append(z)
     for i in range(1, time):
-        vel = velocities(r, time, reynoldsnumber, np, yy[(len(yy)-1)], zz[(len(zz)-1)], circulation, d)
+        vel = velocities(r, dt, reynoldsnumber, np, yy[(len(yy)-1)], zz[(len(zz)-1)], circulation, d)
         u = [vel[0]]
         v = [vel[1]]
         u = u[(len(u) - 1)]
