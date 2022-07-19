@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 # npindex=np+1
 # -------------------------------------------------------
 
-np = 2
+np = 50
 npindex = np+1
 spwise = 10
 b = 2
