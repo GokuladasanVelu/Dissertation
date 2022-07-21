@@ -40,6 +40,9 @@ def anim_plot(r, reynoldsnumber, d, tmax, dt, np, y, z, circulation):
     # a = plt.show()
     #
     # return a
+
+##---------------------------------
+    # Animation
     for j in range(0, len(yy)):
         plt.clf()
         ploty = yy[j]
