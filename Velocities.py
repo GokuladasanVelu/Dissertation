@@ -14,14 +14,13 @@ def velocities(r, dt, reynoldsnumber, np, y, z, circulation, d):
     #             r2 = ((y[i] - y[j]) ** 2) + ((z[i] - z[j]) ** 2) + (d ** 2)
     #             u[j] = u[j] + (circulation[i] * (z[j] - z[i])) / (r2 * 2 * pi)
     #             v[j] = v[j] - ((circulation[i]) * (y[j] - y[i])) / (r2 * 2 * pi)
-
+    rcjo = (y[0] - y[1])
     for i in range(0, npindex):
         for j in range(0, npindex):
             if i is not j:
                 r2 = ((y[i] - y[j]) ** 2) + ((z[i] - z[j]) ** 2) + (d ** 2)
-                rcjo = ((y[i] - y[j]))
                 rcj = rcjo + 3.17 * ((dt / reynoldsnumber) ** (1 / 2))
-                rcj2 = rcj ** 2
+                rcj2 = (rcj ** 2) + (d ** 2)
                 if rcj2 > r2:
                     exp = math.exp(-1.25643 * (r / rcj) ** 2)
                     vthj[j] = (circulation[j] / (2 * pi * r)) * (1 - exp)

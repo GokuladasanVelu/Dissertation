@@ -2,7 +2,6 @@ from Velocities import velocities
 import matplotlib.pyplot as plt
 # -----------Plotting particles------------
 
-
 def anim_plot(r, reynoldsnumber, d, tmax, dt, np, y, z, circulation):
     time = (tmax / dt) + 1
     time = int(time)
@@ -41,7 +40,6 @@ def anim_plot(r, reynoldsnumber, d, tmax, dt, np, y, z, circulation):
     # a = plt.show()
     #
     # return a
-
     for j in range(0, len(yy)):
         plt.clf()
         ploty = yy[j]
