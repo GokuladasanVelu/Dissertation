@@ -1,5 +1,4 @@
 import math
-
 from AnimePlot import anim_plot
 from VortexCoordinates import vortex_coodinates
 import matplotlib.pyplot as plt
@@ -29,7 +28,7 @@ d = 0.1 #Smoothing factor
 reynoldsnumber = math.inf
 delT = 1
 rcjo = 12
-r = 0.5
+r = 0.15
 # -------------------------Coordinates Manual entry-------
 # npaslist=[]
 # finalcoordinates=[]
@@ -55,6 +54,11 @@ circulation = coordinates[1]
 z = coordinates[2]
 anim_plot(r, reynoldsnumber, d, tmax, dt, np, y, z, circulation)
 
+
+ploty = y
+plotz = circulation
+plt.plot(ploty, plotz)
+plt.show()
 # rcore = coreradiusandvelocity b = plt.show()[0]
 # # vcore = coreradiusandvelocity[1]
 # # plt.plot(rcore, vcore)

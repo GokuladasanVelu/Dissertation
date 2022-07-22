@@ -33,22 +33,22 @@ def anim_plot(r, reynoldsnumber, d, tmax, dt, np, y, z, circulation):
 
 
     # final plot:
-    # plotz = zz[(len(zz) - 1)]
-    # ploty = yy[(len(yy) - 1)]
-    #
-    # plt.plot(ploty, plotz)
-    # a = plt.show()
-    #
-    # return a
+    plotz = zz[(len(zz) - 1)]
+    ploty = yy[(len(yy) - 1)]
+
+    plt.plot(ploty, plotz)
+    a = plt.show()
+
+    return a
 
 ##---------------------------------
-    # Animation
-    for j in range(0, len(yy)):
-        plt.clf()
-        ploty = yy[j]
-        plotz = zz[j]
-        plt.plot(ploty, plotz)
-        plt.pause(0.01)
-    plt.show()
+    # # Animation
+    # for j in range(0, len(yy)):
+    #     plt.clf()
+    #     ploty = yy[j]
+    #     plotz = zz[j]
+    #     plt.plot(ploty, plotz)
+    #     plt.pause(0.01)
+    # plt.show()
 
 
