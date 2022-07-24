@@ -24,11 +24,12 @@ b = 2
 gammao = 1
 tmax = 2
 dt = 0.01
-d = 0.1 #Smoothing factor
+d = 0.1  # Smoothing factor
 reynoldsnumber = math.inf
 delT = 1
 rcjo = 12
 r = 0.15
+coordinate_type = 1  # Symmetric line space
 # -------------------------Coordinates Manual entry-------
 # npaslist=[]
 # finalcoordinates=[]
@@ -48,7 +49,7 @@ r = 0.15
 #         print("no vortices present")
 # -------------------------------------------------------------------------
 
-coordinates = vortex_coodinates(np, b, gammao, np)
+coordinates = vortex_coodinates(np, b, gammao, np, coordinate_type)
 y = coordinates[0]
 circulation = coordinates[1]
 z = coordinates[2]
