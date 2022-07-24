@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 # npindex=np+1
 # -------------------------------------------------------
 
-np = 100
+np = 50
 npindex = np+1
 spwise = 10
 b = 2
@@ -53,13 +53,17 @@ coordinates = vortex_coodinates(np, b, gammao, np, coordinate_type)
 y = coordinates[0]
 circulation = coordinates[1]
 z = coordinates[2]
+ploty = y
+plotz = circulation
+plt.title("Circulation Distribution")
+plt.xlabel("Y-axis")
+plt.ylabel("Circulation (" + "\u0393" + ")")
+plt.plot(ploty, plotz)
+plt.show()
 anim_plot(r, reynoldsnumber, d, tmax, dt, np, y, z, circulation)
 
 
-ploty = y
-plotz = circulation
-plt.plot(ploty, plotz)
-plt.show()
+
 # rcore = coreradiusandvelocity b = plt.show()[0]
 # # vcore = coreradiusandvelocity[1]
 # # plt.plot(rcore, vcore)

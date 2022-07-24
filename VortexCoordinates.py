@@ -34,11 +34,9 @@ def vortex_coodinates(npts, b, gammao, np, coordinate_type):
             # place point vortex at three quarter point
             y = y0 + (0.75 * dy)
             y = list(y)
-            y.pop(np - 1)
+            # y.pop(np - 1)
             circulation = lagrangian_circulation(y, b, gammao, npts, dy)
             z = [0] * len(y)
 
             return y, circulation, z
-
-
 

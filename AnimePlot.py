@@ -33,22 +33,28 @@ def anim_plot(r, reynoldsnumber, d, tmax, dt, np, y, z, circulation):
 
 
     # final plot:
-    plotz = zz[(len(zz) - 1)]
-    ploty = yy[(len(yy) - 1)]
-
-    plt.plot(ploty, plotz)
-    a = plt.show()
-
-    return a
+    # plt.title("Rollup Wake Shape")
+    # plt.xlabel("Y-axis")
+    # plt.ylabel("Z-axis")
+    # plotz = zz[(len(zz) - 1)]
+    # ploty = yy[(len(yy) - 1)]
+    #
+    # plt.scatter(ploty, plotz)
+    # a = plt.show()
+    #
+    # return a
 
 ##---------------------------------
     # # Animation
-    # for j in range(0, len(yy)):
-    #     plt.clf()
-    #     ploty = yy[j]
-    #     plotz = zz[j]
-    #     plt.plot(ploty, plotz)
-    #     plt.pause(0.01)
-    # plt.show()
+    for j in range(0, len(yy)):
+        plt.title("Rollup Wake Shape")
+        # plt.xlabel("Y-axis")
+        # plt.ylabel("Z-axis")
+        plt.clf()
+        ploty = yy[j]
+        plotz = zz[j]
+        plt.plot(ploty, plotz)
+        plt.pause(0.01)
+    plt.show()
 
 
