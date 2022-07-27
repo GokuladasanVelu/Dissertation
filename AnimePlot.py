@@ -48,8 +48,8 @@ def anim_plot(r, reynoldsnumber, d, tmax, dt, np, y, z, circulation):
     # # Animation
     for j in range(0, len(yy)):
         plt.title("Rollup Wake Shape")
-        # plt.xlabel("Y-axis")
-        # plt.ylabel("Z-axis")
+        plt.xlabel("Y-axis")
+        plt.ylabel("Z-axis")
         plt.clf()
         ploty = yy[j]
         plotz = zz[j]
