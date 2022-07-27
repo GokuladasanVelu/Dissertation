@@ -27,7 +27,6 @@ dt = 0.01
 d = 0.1  # Smoothing factor
 reynoldsnumber = math.inf
 delT = 1
-rcjo = 12
 r = 0.15
 coordinate_type = 1  # Symmetric line space
 # -------------------------Coordinates Manual entry-------
