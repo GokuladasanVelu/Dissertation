@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 # npindex=np+1
 # -------------------------------------------------------
 
-np = 50
+np = 100
 npindex = np+1
 spwise = 10
 b = 2
@@ -28,7 +28,7 @@ d = 0.1  # Smoothing factor
 reynoldsnumber = math.inf
 delT = 1
 r = 0.15
-coordinate_type = 1  # Symmetric line space
+coordinate_type = 2  # Symmetric line space
 # -------------------------Coordinates Manual entry-------
 # npaslist=[]
 # finalcoordinates=[]
