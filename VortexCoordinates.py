@@ -2,7 +2,7 @@ import numpy as npy
 from LagrangianCirculation import lagrangian_circulation
 
 
-def vortex_coodinates(npts, b, gammao, np, coordinate_type):
+def vortex_coodinates(npts, b, gammao, np, coordinate_type, hight):
     match coordinate_type:
         case 1:  # Symmetric line space
             z = b / 2
@@ -23,7 +23,7 @@ def vortex_coodinates(npts, b, gammao, np, coordinate_type):
             symmetricy = flippedy + y
             symmetric_circulation = flipped_circulation + circulation
             lengthy = len(symmetricy)
-            z = [0] * lengthy
+            z = [hight] * lengthy
 
             return symmetricy, symmetric_circulation, z
 
@@ -45,7 +45,7 @@ def vortex_coodinates(npts, b, gammao, np, coordinate_type):
             symmetricy = flippedy + y
             symmetric_circulation = flipped_circulation + circulation
             lengthy = len(symmetricy)
-            z = [0] * lengthy
+            z = [hight] * lengthy
 
             return symmetricy, symmetric_circulation, z
         case 3:
@@ -58,7 +58,7 @@ def vortex_coodinates(npts, b, gammao, np, coordinate_type):
             y = list(y)
             y.pop(np - 1)
             circulation = lagrangian_circulation(y, b, gammao, npts, dy)
-            z = [0] * len(y)
+            z = [hight] * len(y)
             # flippedy = - npy.flipud(y)
             # flippedy = list(flippedy)
             # flipped_circulation = npy.flipud(circulation)

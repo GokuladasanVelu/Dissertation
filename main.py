@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 # npindex=np+1
 # -------------------------------------------------------
 
-np = 100
+np = 1000
 npindex = np+1
 spwise = 10
 b = 2
@@ -28,7 +28,8 @@ d = 0.02 # Smoothing factor
 reynoldsnumber = math.inf
 delT = 1
 r = 0.15
-coordinate_type = 3  # Symmetric line space
+coordinate_type = 1  # Symmetric line space
+hight = 0
 # -------------------------Coordinates Manual entry-------
 # npaslist=[]
 # finalcoordinates=[]
@@ -48,7 +49,7 @@ coordinate_type = 3  # Symmetric line space
 #         print("no vortices present")
 # -------------------------------------------------------------------------
 
-coordinates = vortex_coodinates(np, b, gammao, np, coordinate_type)
+coordinates = vortex_coodinates(np, b, gammao, np, coordinate_type, hight)
 y = coordinates[0]
 circulation = coordinates[1]
 z = coordinates[2]
