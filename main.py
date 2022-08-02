@@ -22,13 +22,13 @@ npindex = np+1
 spwise = 10
 b = 2
 gammao = 1
-tmax = 2
-dt = 0.01
-d = 0.1  # Smoothing factor
+tmax = 0.5
+dt = 1.25 * (10 ** (-3))
+d = 0.02 # Smoothing factor
 reynoldsnumber = math.inf
 delT = 1
 r = 0.15
-coordinate_type = 2  # Symmetric line space
+coordinate_type = 3  # Symmetric line space
 # -------------------------Coordinates Manual entry-------
 # npaslist=[]
 # finalcoordinates=[]
