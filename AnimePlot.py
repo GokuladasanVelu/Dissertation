@@ -2,7 +2,7 @@ from Velocities import velocities
 import matplotlib.pyplot as plt
 # -----------Plotting particles------------
 
-def anim_plot(r, reynoldsnumber, d, tmax, dt, np, y, z, circulation):
+def anim_plot(r, reynoldsnumber, d, tmax, dt, np, y, z, circulation, height):
     time = (tmax / dt) + 1
     time = int(time)
     yy = []
@@ -12,7 +12,7 @@ def anim_plot(r, reynoldsnumber, d, tmax, dt, np, y, z, circulation):
     yy.append(y)
     zz.append(z)
     for i in range(1, time):
-        vel = velocities(r, dt, reynoldsnumber, np, yy[(len(yy)-1)], zz[(len(zz)-1)], circulation, d)
+        vel = velocities(r, dt, reynoldsnumber, np, yy[(len(yy)-1)], zz[(len(zz)-1)], circulation, d, height)
         u = [vel[0]]
         v = [vel[1]]
         u = u[(len(u) - 1)]
@@ -33,28 +33,28 @@ def anim_plot(r, reynoldsnumber, d, tmax, dt, np, y, z, circulation):
 
 
     # final plot:
-    # plt.title("Rollup Wake Shape")
-    # plt.xlabel("Y-axis")
-    # plt.ylabel("Z-axis")
-    # plotz = zz[(len(zz) - 1)]
-    # ploty = yy[(len(yy) - 1)]
-    #
-    # plt.scatter(ploty, plotz)
-    # a = plt.show()
-    #
-    # return a
+    plt.title("Rollup Wake Shape")
+    plt.xlabel("Y-axis")
+    plt.ylabel("Z-axis")
+    plotz = zz[(len(zz) - 1)]
+    ploty = yy[(len(yy) - 1)]
+
+    plt.plot(ploty, plotz)
+    a = plt.show()
+
+    return a
 
 ##---------------------------------
     # # Animation
-    for j in range(0, len(yy)):
-        plt.title("Rollup Wake Shape")
-        plt.xlabel("Y-axis")
-        plt.ylabel("Z-axis")
-        plt.clf()
-        ploty = yy[j]
-        plotz = zz[j]
-        plt.plot(ploty, plotz)
-        plt.pause(0.01)
-    plt.show()
+    # for j in range(0, len(yy)):
+    #     plt.title("Rollup Wake Shape")
+    #     plt.xlabel("Y-axis")
+    #     plt.ylabel("Z-axis")
+    #     plt.clf()
+    #     ploty = yy[j]
+    #     plotz = zz[j]
+    #     plt.plot(ploty, plotz)
+    #     plt.pause(0.01)
+    # plt.show()
 
 

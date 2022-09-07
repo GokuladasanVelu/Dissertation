@@ -2,7 +2,7 @@ import math
 # -------------------------Velocity-----------------------------------
 
 
-def velocities(r, dt, reynoldsnumber, np, y, z, circulation, d):
+def velocities(r, dt, reynoldsnumber, np, y, z, circulation, d, height):
     pi = math.pi
     npindex = len(y)
     u = [0] * npindex
@@ -35,5 +35,5 @@ def velocities(r, dt, reynoldsnumber, np, y, z, circulation, d):
     #                 r2 = ((y[i] - y[j]) ** 2) + ((z[i] - z[j]) ** 2) + (d ** 2)
     #                 u[j] = u[j] + (circulation[i] * (z[j] - z[i])) / (r2 * 2 * pi)
     #                 v[j] = v[j] - ((circulation[i]) * (y[j] - y[i])) / (r2 * 2 * pi)
-
+    #
     return u, v
