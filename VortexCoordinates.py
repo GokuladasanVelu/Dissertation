@@ -2,7 +2,7 @@ import numpy as npy
 from LagrangianCirculation import lagrangian_circulation
 
 
-def vortex_coodinates(npts, b, gammao, np, coordinate_type):
+def vortex_coodinates(npts, b, gammao, np, coordinate_type, config_selected):
     match coordinate_type:
         case 1:  # Symmetric line space
             z = b / 2
@@ -15,7 +15,7 @@ def vortex_coodinates(npts, b, gammao, np, coordinate_type):
             y.pop(np - 1)
 
             # Generate negative side of wake
-            circulation = lagrangian_circulation(y, b, gammao, npts, dy)
+            circulation = lagrangian_circulation(y, b, gammao, npts, dy, config_selected)
             flippedy = -npy.flipud(y)
             flippedy = list(flippedy)
             flipped_circulation = -npy.flipud(circulation)
